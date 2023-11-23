@@ -56,45 +56,53 @@ while True:
         match escolha:
             
             case 1:
-                print('Será necessario a apresentação de alguns documentos, \ninsira as informações nos locais abaixo.')
+                while True:
+                    try:
+                        print('Será necessario a apresentação de alguns documentos, \ninsira as informações nos locais abaixo.')
 
-                print('')
-                nome_paciente = input('Qual o nome do paciente? ')
-                rg = int(input('Qual o RG? '))
-                cpf = int(input('Qual o CPF? '))
-                plano_saude = input('Qual o plano de saúde? (se não tiver, preencha com "nenhum") ')
-                if plano_saude == 'nenhum':
-                    pass
-                else:
-                    cns = int(input('Qual o número do CNS (Cartão Nacional de Saúde)?'))
-                
-                print('')
-                print('Muito obrigado pela colaboração, seu agendamento já está no registro!')
+                        print('')
+                        nome_paciente = input('Qual o nome do paciente? ')
+                        rg = int(input('Qual o RG? '))
+                        cpf = int(input('Qual o CPF? '))
+                        plano_saude = input('Qual o plano de saúde? (se não tiver, preencha com "nenhum") ')
+                        if plano_saude == 'nenhum':
+                            pass
+                        else:
+                            cns = int(input('Qual o número do CNS (Cartão Nacional de Saúde)?'))
+                        
+                        print('')
+                        print('Muito obrigado pela colaboração, seu agendamento já está no registro!')
 
-                relatorio('urgência e emergência')
+                        relatorio('urgência e emergência')
 
-                sys.exit()
+                        sys.exit()
+                    except ValueError:
+                        erro()
 
             case 2:
-                print('Será necessario a apresentação de alguns documentos, \ninsira as informações nos locais abaixo.')
+                while True:
+                    try:
+                        print('Será necessario a apresentação de alguns documentos, \ninsira as informações nos locais abaixo.')
 
-                print('')
-                nome_paciente = input('Qual o nome do paciente? ')
-                rg = int(input('Qual o RG? '))
-                cpf = int(input('Qual o CPF? '))
-                plano_saude = input('Qual o plano de saúde? (se não tiver, preencha com "nenhum") ')
-                if plano_saude == 'nenhum':
-                    pass
-                else:
-                    cns = int(input('Qual o número do CNS (Cartão Nacional de Saúde)?'))
-                
-                print('')
-                print('Será necessário que o paciente leve os exames solicitados \npelo médico e objetos para uso pessoal!')
-                print('Muito obrigado pela colaboração, seu agendamento já está no registro!')
+                        print('')
+                        nome_paciente = input('Qual o nome do paciente? ')
+                        rg = int(input('Qual o RG? '))
+                        cpf = int(input('Qual o CPF? '))
+                        plano_saude = input('Qual o plano de saúde? (se não tiver, preencha com "nenhum") ')
+                        if plano_saude == 'nenhum':
+                            pass
+                        else:
+                            cns = int(input('Qual o número do CNS (Cartão Nacional de Saúde)?'))
+                        
+                        print('')
+                        print('Será necessário que o paciente leve os exames solicitados \npelo médico e objetos para uso pessoal!')
+                        print('Muito obrigado pela colaboração, seu agendamento já está no registro!')
 
-                relatorio('cirurgia')
+                        relatorio('cirurgia')
 
-                sys.exit()
+                        sys.exit()
+                    except ValueError:
+                        erro()
 
             case _:
                 erro()
